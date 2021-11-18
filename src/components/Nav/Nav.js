@@ -1,22 +1,39 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Nav.css";
+import linkedInLogo from "../../images/linkedin-logo.png";
+import instagramLogo from "../../images/instagram-logo.png";
+import githubLogo from "../../images/github-logo.png";
 
-export function Nav(props) {
+export function Nav() {
   return (
-    <div>
-      <h1>Brandon Ritchie</h1>
+    <div className="nav">
+      <h1 className="nav-title">
+        <Link to="/" className="title">
+          Brandon Ritchie
+        </Link>
+      </h1>
       <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/About">About</Link>
-        <Link to="/Contact">Contact</Link>
-        <Link to="/Projects">Projects</Link>
+        <Link to="/About" className="links">
+          About
+        </Link>
+        <Link to="/Contact" className="links">
+          Contact
+        </Link>
+        <Link to="/Projects" className="links">
+          Projects
+        </Link>
       </div>
-      <div>
-        <ul>
-          <li>LinkedIn</li>
-          <li>Instagram</li>
-          <li>twitter</li>
-        </ul>
+      <div className="nav-socials">
+        <a href="https://www.linkedin.com/in/brandon-ritchie-70106219a/">
+          <img src={linkedInLogo} />
+        </a>
+        <a href="https://www.instagram.com/_brandon.ritchie/">
+          <img src={instagramLogo} />
+        </a>
+        <a href="https://github.com/brandon-ritchie">
+          <img src={githubLogo} />
+        </a>
       </div>
     </div>
   );
