@@ -1,0 +1,42 @@
+html {
+  background-color: #0c0032;
+  font-size: 16px;
+  color: whitesmoke;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+h1 {
+  font-family: "Farsan", cursive;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: whitesmoke;
+}
+
+h2,
+li {
+  font-family: "Teko", sans-serif;
+  font-size: 1.875rem;
+  font-weight: 500;
+  color: whitesmoke;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  color: whitesmoke;
+}
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+}
