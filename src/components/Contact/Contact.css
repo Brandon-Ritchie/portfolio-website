@@ -1,6 +1,7 @@
 .article {
   padding: 1rem;
   flex-direction: column;
+  max-width: 900px;
 }
 
 .article h2,
