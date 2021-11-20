@@ -7,7 +7,7 @@ import linkedInLogo from "../../images/linkedin-logo.png";
 
 export function Contact(props) {
   return (
-    <div>
+    <div className="article">
       <h2>Contact</h2>
       <p>Have something I can help you with? I would love to hear from you!</p>
       <div className="socials">

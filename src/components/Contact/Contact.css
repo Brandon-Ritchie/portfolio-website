@@ -1,3 +1,19 @@
+.article {
+  padding: 1rem;
+  flex-direction: column;
+}
+
+.article h2,
+p {
+  padding: 0.25rem;
+}
+
+.socials {
+  padding-top: 0.5rem;
+  display: flex;
+  justify-content: end;
+}
+
 .socials img {
   height: 1.875rem;
   margin-right: 1rem;
