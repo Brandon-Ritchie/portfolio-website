@@ -17,3 +17,8 @@
   font-size: 3rem;
   font-family: "Lato", sans-serif;
 }
+
+.titles,
+.name {
+  text-shadow: 0rem 0rem 5rem black;
+}
