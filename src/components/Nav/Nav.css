@@ -1,16 +1,11 @@
 .nav {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 100%;
   min-height: 2rem;
-  background-color: #240090;
+  background-color: #4d4d4d;
   padding: 1rem 1rem 0.5rem 1rem;
   border-radius: 0.5rem;
-}
-
-.nav-title {
-  grid-column: 1 / 2;
-  margin-left: 1rem;
 }
 
 .nav-title .title {
@@ -19,7 +14,8 @@
 }
 
 .nav-links {
-  grid-column: 2 / 3;
+  grid-column: 1 / 2;
+  margin-left: 0.5rem;
   display: flex;
 }
 
@@ -33,7 +29,7 @@
 }
 
 .nav-socials {
-  grid-column: 3 / 4;
+  grid-column: 2 / 3;
   display: flex;
   justify-self: right;
   justify-content: right;

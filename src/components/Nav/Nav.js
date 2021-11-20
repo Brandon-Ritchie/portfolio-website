@@ -8,12 +8,10 @@ import githubLogo from "../../images/github-logo.png";
 export function Nav() {
   return (
     <div className="nav">
-      <h1 className="nav-title">
-        <Link to="/" className="title">
-          Brandon Ritchie
-        </Link>
-      </h1>
       <div className="nav-links">
+        <Link to="/" className="links">
+          Home
+        </Link>
         <Link to="/About" className="links">
           About
         </Link>

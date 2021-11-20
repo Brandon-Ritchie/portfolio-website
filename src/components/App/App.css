@@ -1,13 +1,14 @@
 html {
-  background-color: #0c0032;
   font-size: 16px;
   color: whitesmoke;
   box-sizing: border-box;
 }
 
 body {
+  background-image: url("../../images/website-background.jpg");
+  background-size: 100%;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 100%;
 }
 
 h1 {
