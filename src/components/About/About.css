@@ -1,0 +1,26 @@
+.article {
+  display: grid;
+  grid-template: repeat(2, 1fr), repeat(2, 1fr);
+  justify-content: center;
+}
+
+.about-me-container {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+}
+
+.portrait-container {
+  grid-row: 1 / 3;
+  grid-column: 2 / 3;
+}
+
+.portrait-container img {
+  border-radius: 1rem;
+  max-width: 100%;
+  margin-top: 2.5rem;
+}
+
+.languages-container {
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+}
