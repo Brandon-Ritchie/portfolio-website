@@ -1,42 +1,64 @@
-<script>
-	import '@skeletonlabs/skeleton/themes/theme-gold-nouveau.css';
+<script lang="ts">
+	import '../theme.postcss';
 	import '@skeletonlabs/skeleton/styles/all.css';
 	import '../app.postcss';
 	import { AppBar, AppShell, LightSwitch } from '@skeletonlabs/skeleton';
 	import 'iconify-icon';
 
-	const pages = [
+	const links: {
+		name: string;
+		href: string;
+	}[] = [
 		{ name: 'Home', href: '/' },
 		{ name: 'About', href: '/about' },
-		{ name: 'Contact', href: '/contact' }
+		{ name: 'Projects', href: '/projects' }
+	];
+
+	const socials: {
+		icon: string;
+		href: string;
+	}[] = [
+		{
+			icon: 'iconoir:github',
+			href: 'https://github.com/Brandon-Ritchie'
+		},
+		{
+			icon: 'iconoir:twitter',
+			href: 'https://twitter.com/ritchietrumpet'
+		},
+		{
+			icon: 'iconoir:linkedin',
+			href: 'https://www.linkedin.com/in/brandon-ritchie-70106219a/'
+		}
 	];
 </script>
 
 <AppShell>
-	<svelte:fragment slot="pageHeader">
+	<svelte:fragment slot="header">
 		<AppBar slotTrail="place-content-end">
-			{#each pages as page}
-				<a href={page.href} class="font-bold px-2">{page.name}</a>
-			{/each}
+			<div class="flex flex-row text-center">
+				{#each links as link, i}
+					<a
+						class="w-24 py-2 mx-1 hover:shadow hover:bg-surface-active-token rounded-container-token"
+						href={link.href}
+					>
+						{link.name}
+					</a>
+				{/each}
+			</div>
+
 			<svelte:fragment slot="trail">
-				<a href="https://github.com/Brandon-Ritchie">
-					<iconify-icon icon="iconoir:github" />
-				</a>
-				<a href="https://twitter.com/ritchietrumpet">
-					<iconify-icon icon="iconoir:twitter" />
-				</a>
-				<a href="https://www.linkedin.com/in/brandon-ritchie-70106219a/">
-					<iconify-icon icon="iconoir:linkedin" />
-				</a>
-			</svelte:fragment>
-		</AppBar>
-	</svelte:fragment>
-	<slot />
-	<svelte:fragment slot="pageFooter">
-		<AppBar slotTrail="place-content-end">
-			<svelte:fragment slot="trail">
+				{#each socials as social}
+					<a
+						class="pt-2 px-2 hover:shadow hover:bg-surface-active-token rounded-token"
+						href={social.href}
+					>
+						<iconify-icon icon={social.icon} />
+					</a>
+				{/each}
 				<LightSwitch />
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>
+	<slot />
 </AppShell>
