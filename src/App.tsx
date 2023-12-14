@@ -1,13 +1,11 @@
-import './App.css'
+import "./App.css";
 
 function App() {
   return (
-    <>
-      <h1>
-        Hello World!
-      </h1>
-    </>
-  )
+    <div className="bg-background justify-center items-center h-screen flex">
+      <h1 className="text-white">Hello World!</h1>
+    </div>
+  );
 }
 
-export default App
+export default App;
