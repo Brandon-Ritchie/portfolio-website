@@ -1,6 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import PageLayout from "./components/PageLayout.tsx";
+import PageLayout from "./lib/components/PageLayout.tsx";
 import Root from "./routes/Root.tsx";
+import Software from "./routes/software/Software.tsx";
+import Music from "./routes/music/Music.tsx";
 
 const router = createBrowserRouter([
   {
@@ -10,6 +12,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Root />,
+      },
+      {
+        path: "/software",
+        element: <Software />,
+      },
+      {
+        path: "/music",
+        element: <Music />,
       },
     ],
   },

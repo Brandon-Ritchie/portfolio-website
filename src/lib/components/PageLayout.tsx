@@ -4,7 +4,9 @@ const PageLayout = () => {
   return (
     <main className="h-screen">
       <NavBar />
-      <Outlet />
+      <div className="h-full">
+        <Outlet />
+      </div>
     </main>
   );
 };
@@ -53,13 +55,13 @@ const NavBar = () => {
 const Links = () => (
   <>
     <li>
-      <Link to="/">Item 1</Link>
+      <Link to="/">Home</Link>
     </li>
     <li>
-      <Link to="/">Item 2</Link>
+      <Link to="/software">Software</Link>
     </li>
     <li>
-      <Link to="/">Item 3</Link>
+      <Link to="/music">Music</Link>
     </li>
   </>
 );
