@@ -4,18 +4,22 @@ const PageLayout = () => {
   return (
     <main className="h-screen">
       <NavBar />
-      <div className="h-full">
-        <Outlet />
-      </div>
+      <Outlet />
     </main>
   );
 };
 
 const NavBar = () => {
   return (
-    <div className="navbar bg-base-100">
-      <div className="navbar-start">
-        <div className="dropdown">
+    <div className="navbar bg-base-100 w-full">
+      <div className="flex-1">
+        <Link className="btn btn-ghost text-xl" to="/">
+          Brandon Ritchie
+        </Link>
+      </div>
+
+      <nav className="flex-none">
+        <div className="dropdown dropdown-end">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -39,15 +43,12 @@ const NavBar = () => {
             <Links />
           </ul>
         </div>
-        <Link className="btn btn-ghost text-xl" to="/">
-          Brandon Ritchie
-        </Link>
-      </div>
-      <div className="navbar-end hidden lg:flex">
+      </nav>
+      <nav className="navbar-end hidden flex-none lg:flex">
         <ul className="menu menu-horizontal px-1">
           <Links />
         </ul>
-      </div>
+      </nav>
     </div>
   );
 };
