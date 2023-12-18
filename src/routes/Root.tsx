@@ -1,10 +1,18 @@
-function App() {
+import headshot from "../assets/Headshot.jpg";
+
+function Home() {
   return (
-    <div className="flex h-screen flex-col items-center justify-center bg-background">
-      <h1 className="text-6xl text-white">Brandon Ritchie</h1>
-      <h2 className="text-xl text-white">Full Stack Developer | Musician</h2>
+    <div className="flex flex-col items-center justify-center">
+      <img
+        src={headshot}
+        alt="A headshot of Brandon Ritchie, the owner of this site."
+        className="my-6 rounded-full"
+      />
+      <h1 className="text-6xl">Brandon Ritchie</h1>
+      <p className="text-xl">Full Stack Developer</p>
+      <p className="text-xl">Musician</p>
     </div>
   );
 }
 
-export default App;
+export default Home;
