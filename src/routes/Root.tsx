@@ -1,4 +1,4 @@
-import headshot from "../assets/Headshot.jpg";
+import headshot from "../assets/headshot.jpg";
 import { Link } from "react-router-dom";
 
 function Root() {
