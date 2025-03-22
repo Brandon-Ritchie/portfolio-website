@@ -11,7 +11,9 @@ export const PageLayout = () => {
         <NonMobileMenu />
       </nav>
 
-      <Outlet />
+      <div className="mx-8 my-4 h-full">
+        <Outlet />
+      </div>
     </main>
   );
 };
