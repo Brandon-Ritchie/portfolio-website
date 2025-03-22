@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import PageLayout from "./lib/components/PageLayout.tsx";
+import { PageLayout } from "./lib/components/PageLayout.tsx";
+import Music from "./routes/music/Music.tsx";
 import Root from "./routes/Root.tsx";
 import Software from "./routes/software/Software.tsx";
-import Music from "./routes/music/Music.tsx";
 
 const router = createBrowserRouter([
   {
