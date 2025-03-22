@@ -3,21 +3,16 @@ import { Link, Outlet } from "react-router-dom";
 export const PageLayout = () => {
   return (
     <main className="h-screen">
-      <NavBar />
+      <nav className="d-flex navbar w-full justify-between bg-base-100">
+        <NameHomeLink />
+
+        <MobileMenu />
+
+        <NonMobileMenu />
+      </nav>
+
       <Outlet />
     </main>
-  );
-};
-
-const NavBar = () => {
-  return (
-    <nav className="d-flex navbar w-full justify-between bg-base-100">
-      <NameHomeLink />
-
-      <MobileMenu />
-
-      <NonMobileMenu />
-    </nav>
   );
 };
 
