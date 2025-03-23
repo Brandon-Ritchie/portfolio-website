@@ -3,7 +3,7 @@ import headshot from "../assets/headshot.jpg";
 
 export function Root() {
   return (
-    <div className="flex flex-col items-center justify-center text-center">
+    <div className="flex w-full flex-col items-center justify-center text-center">
       <img
         src={headshot}
         alt="A headshot of Brandon Ritchie, the owner of this site."
