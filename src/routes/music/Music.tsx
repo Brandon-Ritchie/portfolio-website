@@ -27,20 +27,21 @@ export function Music() {
 
 const InstagramEmbed = () => {
   useEffect(() => {
-    const script = document.createElement("script");
-    script.async = true;
-    script.src = "//www.instagram.com/embed.js";
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup the script when the component unmounts
-      const existingScript = document.querySelector(
-        'script[src="//www.instagram.com/embed.js"]',
-      );
-      if (existingScript) {
-        document.body.removeChild(existingScript);
-      }
-    };
+    // Check if the script is already present
+    if (!window.instgrm) {
+      const script = document.createElement("script");
+      script.async = true;
+      script.src = "//www.instagram.com/embed.js";
+      script.onload = () => {
+        if (window.instgrm) {
+          window.instgrm.Embeds.process();
+        }
+      };
+      document.body.appendChild(script);
+    } else {
+      // If script is already loaded, manually reprocess embeds
+      window.instgrm.Embeds.process();
+    }
   }, []);
 
   return (
