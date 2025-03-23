@@ -31,6 +31,16 @@ const InstagramEmbed = () => {
     script.async = true;
     script.src = "//www.instagram.com/embed.js";
     document.body.appendChild(script);
+
+    return () => {
+      // Cleanup the script when the component unmounts
+      const existingScript = document.querySelector(
+        'script[src="//www.instagram.com/embed.js"]',
+      );
+      if (existingScript) {
+        document.body.removeChild(existingScript);
+      }
+    };
   }, []);
 
   return (
